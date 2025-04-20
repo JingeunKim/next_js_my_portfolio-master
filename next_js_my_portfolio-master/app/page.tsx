@@ -5,13 +5,13 @@ import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // 애니메이션을 위한 framer-motion 추가
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
+import React, { MouseEvent } from "react";
 
 const Navbar = () => {
-  const text = "FF 택스";
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
+  const [, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -21,7 +21,7 @@ const Navbar = () => {
   const navbarJustify = isHomePage ? "justify-between" : "justify-center";
 
   // 스무스 스크롤 처리 함수
-  const handleHomeClick = (e) => {
+  const handleHomeClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (isHomePage) {
       e.preventDefault();
       window.scrollTo({
