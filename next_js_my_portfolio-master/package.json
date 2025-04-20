@@ -26,7 +26,7 @@
     "lucide-react": "^0.454.0",
     "next": "14.2.15",
     "next-themes": "^0.4.3",
-    "react": "^18.0",
+    "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",
     "react-redux": "^9.1.2",
@@ -46,21 +46,5 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "typescript": "^5"
-  },
-  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
-  "main": "postcss.config.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JingeunKim/next_js_my_portfolio-master.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JingeunKim/next_js_my_portfolio-master/issues"
-  },
-  "homepage": "https://github.com/JingeunKim/next_js_my_portfolio-master#readme"
+  }
 }
