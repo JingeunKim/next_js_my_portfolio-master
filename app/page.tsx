@@ -121,24 +121,23 @@ const IvoryInfoSection = () => (
     </div>
   </section>
 );
-
-// ========== TaxAccountants ==========
+// ========== TaxAccountants (반응형 개선) ==========
 const TaxAccountants = () => (
   <section className="px-0 py-14 bg-white -mt-4">
-    <div className="max-w-screen-xl mx-auto flex flex-wrap justify-between space-x-10">
+    <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between gap-10 px-4">
       {/* 이지운 세무사 */}
-      <div className="flex space-x-6 items-center">
+      <div className="flex flex-col sm:flex-row items-center gap-6 bg-white rounded-xl shadow-md p-6 w-full md:w-1/2">
         <img 
           src="/images/semu2.jpeg" 
-          className="w-48 h-48 object-cover rounded-full shadow-lg"
+          className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-full shadow-lg"
           alt="이지운 세무사"
         />
-        <div className="text-left">
-          <h3 className="text-3xl font-semibold text-blue-800 mb-4"
+        <div className="text-center sm:text-left">
+          <h3 className="text-2xl md:text-3xl font-semibold text-blue-800 mb-4"
               style={{ fontFamily: "'Montserrat', 'Noto Sans KR', sans-serif" }}>
             이지운
           </h3>
-          <ul className="space-y-3 text-lg text-gray-800">
+          <ul className="space-y-2 text-base md:text-lg text-gray-800">
             <li>세무사자격시험합격</li>
             <li>現 청목세무회계 대표세무사</li>
             <li>現 법무법인 명도 세무 자문위원</li>
@@ -151,18 +150,18 @@ const TaxAccountants = () => (
       </div>
 
       {/* 김민진 세무사 */}
-      <div className="flex space-x-6 items-center">
+      <div className="flex flex-col sm:flex-row items-center gap-6 bg-white rounded-xl shadow-md p-6 w-full md:w-1/2">
         <img
           src="/images/semu1.jpeg"
-          className="w-48 h-48 object-cover rounded-full shadow-lg"
+          className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-full shadow-lg"
           alt="김민진 세무사"
         />
-        <div className="text-left">
-          <h3 className="text-3xl font-semibold text-blue-800 mb-4"
+        <div className="text-center sm:text-left">
+          <h3 className="text-2xl md:text-3xl font-semibold text-blue-800 mb-4"
               style={{ fontFamily: "'Montserrat', 'Noto Sans KR', sans-serif" }}>
             김민진
           </h3>
-          <ul className="space-y-3 text-lg text-gray-800">
+          <ul className="space-y-2 text-base md:text-lg text-gray-800">
             <li>세무사자격시험합격</li>
             <li>現 진우세무회계 대표세무사</li>
             <li>前 NH투자증권 TAX센터 근무</li>
@@ -173,6 +172,8 @@ const TaxAccountants = () => (
     </div>
   </section>
 );
+
+
 
 
 // ========== FreeConsultSection ==========
