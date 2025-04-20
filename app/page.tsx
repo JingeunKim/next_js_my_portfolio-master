@@ -56,7 +56,7 @@ const FirmTitleSection = () => (
   <section className="w-full bg-gradient-to-r from-[#F5F6FA] to-[#ECEFF4] py-48 mb-0 relative">
     <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-center">
       <h1
-        className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4 drop-shadow-lg"
+        className="text-4xl md:text-5xl font-extrabold text-blue-800 text-center mb-4 drop-shadow-lg"
         style={{ letterSpacing: "0.05em", fontFamily: "Poppins, sans-serif" }}
       >
         프리랜서를 위한 스마트한 절세 솔루션
@@ -96,7 +96,7 @@ const FirmTitleSection = () => (
 // ========== IvoryInfoSection ==========
 const IvoryInfoSection = () => (
   <section className="w-full bg-[#F8F9FB] pt-14 pb-16 -mt-4">
-    <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-center">
+    <div className="max-w-screen-xl mx-auto px-4 flex flex-col text-center items-center">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
