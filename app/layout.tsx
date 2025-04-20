@@ -5,8 +5,7 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "FF Tax",
-  description: "Description of my project"
+  title: "FF Tax"
 };
 
 export default function RootLayout({
