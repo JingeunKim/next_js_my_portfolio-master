@@ -4,10 +4,36 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion"; // 애니메이션을 위한 framer-motion 추가
+import { motion } from "framer-motion";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 import React, { MouseEvent } from "react";
+// ========== ImageSectionOne ==========
+const ImageSectionOne = () => (
+  <section className="w-full py-12">
+    <div className="max-w-screen-xl mx-auto flex justify-center">
+      <img 
+        src="/images/procedure.jpg"  // public/images/procedure.jpg에 파일이 있어야 함
+        alt="Image One"
+        className="w-full max-w-md rounded-lg shadow-lg"
+      />
+    </div>
+  </section>
+);
+
+// ========== ImageSectionTwo ==========
+const ImageSectionTwo = () => (
+  <section className="w-full py-12">
+    <div className="max-w-screen-xl mx-auto flex justify-center">
+      <img 
+        src="/images/comission.png"  // public/images/comission.png에 파일이 있어야 함
+        alt="Image Two"
+        className="w-full max-w-md rounded-lg shadow-lg"
+      />
+    </div>
+  </section>
+);
+
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -32,15 +58,10 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 z-50 p-4 flex items-center h-[70px] overflow-hidden ${navbarJustify} bg-white shadow-md`}
-    >
+    <div className={`fixed top-0 left-0 right-0 z-50 p-4 flex items-center h-[70px] overflow-hidden ${navbarJustify} bg-white shadow-md`}>
       <div className="absolute inset-0 grid grid-cols-5 grid-rows-5 gap-2 z-0"></div>
       {isHomePage && (
-        <div
-          className="text-2xl font-semibold z-10 pl-20"
-          style={{ fontFamily: "Poppins, sans-serif" }}
-        >
+        <div className="text-2xl font-semibold z-10 pl-20" style={{ fontFamily: "Poppins, sans-serif" }}>
           FF 택스
         </div>
       )}
@@ -88,7 +109,6 @@ const FirmTitleSection = () => (
         카카오톡 채널 바로가기
       </a>
     </div>
-    {/* 직선형 Divider로 변경 */}
     <div className="absolute left-0 right-0 bottom-0 w-full h-8 bg-[#F8F9FB]"></div>
   </section>
 );
@@ -121,11 +141,11 @@ const IvoryInfoSection = () => (
     </div>
   </section>
 );
-// ========== TaxAccountants (반응형 개선) ==========
+
+// ========== TaxAccountants ==========
 const TaxAccountants = () => (
   <section className="px-0 py-14 bg-white -mt-4">
     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between gap-10 px-4">
-      {/* 이지운 세무사 */}
       <div className="flex flex-col sm:flex-row items-center gap-6 bg-white rounded-xl shadow-md p-6 w-full md:w-1/2">
         <img 
           src="/images/semu2.jpeg" 
@@ -148,8 +168,6 @@ const TaxAccountants = () => (
           </ul>
         </div>
       </div>
-
-      {/* 김민진 세무사 */}
       <div className="flex flex-col sm:flex-row items-center gap-6 bg-white rounded-xl shadow-md p-6 w-full md:w-1/2">
         <img
           src="/images/semu1.jpeg"
@@ -165,6 +183,7 @@ const TaxAccountants = () => (
             <li>세무사자격시험합격</li>
             <li>現 진우세무회계 대표세무사</li>
             <li>前 NH투자증권 TAX센터 근무</li>
+            <li>前 무지개세무회계연구소, 무지개세무회계 근무</li>
             <li>前 세무법인 스타시아 근무</li>
           </ul>
         </div>
@@ -172,9 +191,6 @@ const TaxAccountants = () => (
     </div>
   </section>
 );
-
-
-
 
 // ========== FreeConsultSection ==========
 const FreeConsultSection = () => (
@@ -248,8 +264,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <div className="pt-[70px]">
+        {/* 상단에 두 개의 이미지 섹션 추가 */}
         <FirmTitleSection />
         <IvoryInfoSection />
+        <ImageSectionOne />
+        <ImageSectionTwo />
         <TaxAccountants />
         <FreeConsultSection />
         <FooterSection />
