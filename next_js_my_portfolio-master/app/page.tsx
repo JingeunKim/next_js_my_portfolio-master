@@ -4,7 +4,6 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 import React, { MouseEvent } from "react";
