@@ -80,12 +80,13 @@ const FirmTitleSection = () => (
         className="text-4xl md:text-5xl font-extrabold text-blue-800 text-center mb-4 drop-shadow-lg"
         style={{ letterSpacing: "0.05em", fontFamily: "Poppins, sans-serif" }}
       >
-        프리랜서를 위한 스마트한 절세 솔루션
+        종합소득세 신고를 위해 두명의 세무사가 뭉쳤다!
       </h1>
       <p className="text-xl md:text-2xl text-gray-600 font-medium text-center mt-2">
-        세금은 줄이고, 시간은 아끼세요.<br />
-        전문가와 함께하는 종합소득세 신고 서비스로 귀찮은 절차를 대신 처리해드립니다.<br />
-        클릭 한 번으로 세금 신고부터 환급까지, 모든 것을 자동화하여 쉽게 처리하세요.<br />
+      종합소득세 신고, 혼자 준비하려면 신경 쓸 것도, 챙길 것도 많습니다.<br />
+      매출 자료부터 경비 정리, 공제 항목까지 제대로 챙겨야 불필요한 세금 없이 깔끔하게 신고할 수 있습니다.<br />
+      두 명의 전문 세무사가 처음부터 끝까지 함께합니다.<br />
+      지금 바로 상담 신청해보세요.<br />
       </p>
       <a
         href="http://pf.kakao.com/_xfmxnwn"
@@ -113,34 +114,7 @@ const FirmTitleSection = () => (
   </section>
 );
 
-// ========== IvoryInfoSection ==========
-const IvoryInfoSection = () => (
-  <section className="w-full bg-[#F8F9FB] pt-14 pb-16 -mt-4">
-    <div className="max-w-screen-xl mx-auto px-4 flex flex-col text-center items-center">
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-3xl md:text-4xl font-bold text-yellow-900 mb-4"
-        style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "0.03em" }}
-      >
-        FF 택스 - For Freelancers
-      </motion.h2>
-      <motion.p 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-lg md:text-xl text-gray-700 text-center max-w-2xl"
-      >
-        우리는 프리랜서를 위한 최덕화된 텍스 솔루션을 제공합니다.<br />
-        전문가의 도움, 그리고 쉬운 환급 과정을 통해 당신의 시간을 아끼세요.<br />
-        당신의 일에 집중하세요 세금은 저희가 처리할게요.
-      </motion.p>
-    </div>
-  </section>
-);
+
 
 // ========== TaxAccountants ==========
 const TaxAccountants = () => (
@@ -200,11 +174,8 @@ const FreeConsultSection = () => (
         className="text-3xl md:text-4xl font-bold text-yellow-800 mb-4"
         style={{ fontFamily: "Poppins, sans-serif", letterSpacing: "0.03em" }}
       >
-        무료 상담 신청
+        종합소득세 신고 신청
       </h2>
-      <p className="text-lg md:text-xl text-gray-700 text-center max-w-2xl mb-8">
-        세금 관련 문의가 있으시면, 전문가와 상담하세요!
-      </p>
       <a
         href="http://pf.kakao.com/_xfmxnwn/chat"
         target="_blank"
@@ -264,9 +235,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <div className="pt-[70px]">
-        {/* 상단에 두 개의 이미지 섹션 추가 */}
         <FirmTitleSection />
-        <IvoryInfoSection />
         <ImageSectionOne />
         <ImageSectionTwo />
         <TaxAccountants />
